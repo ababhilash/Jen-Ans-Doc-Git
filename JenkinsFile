@@ -46,6 +46,7 @@ pipeline {
             sh "docker-compose down"
             sh "docker image rmi aarthur6541/tomcatcust01"
             sh "rm -rf *" 
+            }
         }    
     }
 }  
