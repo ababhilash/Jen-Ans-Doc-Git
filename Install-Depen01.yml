@@ -1,0 +1,19 @@
+---
+- name: Setup Slave for Jenkins Jobs.
+  hosts: slave
+  become: true
+
+  tasks:
+  - name: Install Dependencies
+    yum:
+      name:
+      - git
+      - java-1.8.0-openjdk-devel
+      state: present
+
+  - name: Enable the docker service.
+    service:
+      name: docker
+      enabled: yes
+  - name: Test Ansible
+    command: ping yahoo.com -c3
