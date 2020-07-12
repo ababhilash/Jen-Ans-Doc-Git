@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'GR2' }
     stages {
-        stage ("Build with Ansible")
+        stage ("Build with Ansible") {
             agent {label 'GR2' }
             steps {
                 git credentialsId: '2073c1de-a8ee-4354-956c-19cdad235bfb', url: 'https://github.com/ababhilash/Jen-Ans-Doc-Git'
