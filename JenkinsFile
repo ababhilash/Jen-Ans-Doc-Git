@@ -17,7 +17,7 @@ pipeline {
     stage ("Maven Build") {
         agent {label 'GR3' }
         tools {
-            maven 'maven-3.6.2'
+            maven 'maven-3.5.2'
             jdk 'JDK1.8'
         }
         steps {
